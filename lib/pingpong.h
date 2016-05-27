@@ -102,7 +102,7 @@ long Curl_pp_state_timeout(struct pingpong *pp);
  * made to never block
  */
 CURLcode Curl_pp_sendf(struct pingpong *pp,
-                       const char *fmt, ...);
+                       const char *fmt, ...) FORMAT_PRINTF(2, 3);
 
 /***********************************************************************
  *
@@ -116,7 +116,7 @@ CURLcode Curl_pp_sendf(struct pingpong *pp,
  */
 CURLcode Curl_pp_vsendf(struct pingpong *pp,
                         const char *fmt,
-                        va_list args);
+                        va_list args) FORMAT_PRINTF(2, 0);
 
 /*
  * Curl_pp_readresp()

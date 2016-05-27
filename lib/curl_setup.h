@@ -652,6 +652,14 @@ int netware_init(void);
 #  define WARN_UNUSED_RESULT
 #endif
 
+/* Provide compiler checks for printf-like format strings */
+
+#if defined(__GNUC__)
+#  define FORMAT_PRINTF(x,y) __attribute__((__format__(__printf__, x, y)))
+#else
+#  define FORMAT_PRINTF /*NOTHING*/
+#endif
+
 /*
  * Include macros and defines that should only be processed once.
  */

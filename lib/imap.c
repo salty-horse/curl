@@ -99,7 +99,7 @@ static int imap_getsock(struct connectdata *conn, curl_socket_t *socks,
 static CURLcode imap_doing(struct connectdata *conn, bool *dophase_done);
 static CURLcode imap_setup_connection(struct connectdata *conn);
 static char *imap_atom(const char *str, bool escape_only);
-static CURLcode imap_sendf(struct connectdata *conn, const char *fmt, ...);
+static CURLcode imap_sendf(struct connectdata *conn, const char *fmt, ...) FORMAT_PRINTF(2, 3);
 static CURLcode imap_parse_url_options(struct connectdata *conn);
 static CURLcode imap_parse_url_path(struct connectdata *conn);
 static CURLcode imap_parse_custom_request(struct connectdata *conn);

@@ -49,7 +49,7 @@ CURL_EXTERN wchar_t *curl_dowcsdup(const wchar_t *str, int line,
 
 CURL_EXTERN void curl_memdebug(const char *logname);
 CURL_EXTERN void curl_memlimit(long limit);
-CURL_EXTERN void curl_memlog(const char *format, ...);
+CURL_EXTERN void curl_memlog(const char *format, ...) FORMAT_PRINTF(1, 2);
 
 /* file descriptor manipulators */
 CURL_EXTERN curl_socket_t curl_socket(int domain, int type, int protocol,

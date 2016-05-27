@@ -31,7 +31,7 @@ extern const struct Curl_handler Curl_handler_ftp;
 extern const struct Curl_handler Curl_handler_ftps;
 #endif
 
-CURLcode Curl_ftpsendf(struct connectdata *, const char *fmt, ...);
+CURLcode Curl_ftpsendf(struct connectdata *, const char *fmt, ...) FORMAT_PRINTF(2, 3);
 CURLcode Curl_GetFTPResponse(ssize_t *nread, struct connectdata *conn,
                              int *ftpcode);
 #endif /* CURL_DISABLE_FTP */

@@ -25,9 +25,9 @@
 #include "curl_setup.h"
 
 CURLcode Curl_sendf(curl_socket_t sockfd, struct connectdata *,
-                    const char *fmt, ...);
-void Curl_infof(struct SessionHandle *, const char *fmt, ...);
-void Curl_failf(struct SessionHandle *, const char *fmt, ...);
+                    const char *fmt, ...) FORMAT_PRINTF(3, 4);
+void Curl_infof(struct SessionHandle *, const char *fmt, ...) FORMAT_PRINTF(2, 3);
+void Curl_failf(struct SessionHandle *, const char *fmt, ...) FORMAT_PRINTF(2, 3);
 
 #if defined(CURL_DISABLE_VERBOSE_STRINGS)
 
